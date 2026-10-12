@@ -88,7 +88,7 @@
 .hero-highlights{display:grid;grid-template-columns:minmax(0,3.1fr) minmax(0,3.2fr) minmax(0,1.2fr);max-width:820px;margin:22px auto 0;padding:12px 6px;border:1px solid #ead7df;border-radius:9px;background:#fcf4f6;gap:0}
 .highlight-group{min-width:0;padding:0 7px}.highlight-group+.highlight-group{border-left:1px solid #e6cad5}
 .highlight-group h2{font-size:11px;line-height:1.3;letter-spacing:.3px;font-weight:650;color:#875366;margin:0 0 9px;white-space:nowrap}
-.highlight-group .training-time{display:inline;font-size:inherit;line-height:inherit;color:inherit;font-weight:400;letter-spacing:inherit;margin:0}
+.training-duration-note{margin:4px 0 0;text-align:center;font-size:8px;line-height:1.3;color:#875366;white-space:nowrap}
 .highlight-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.deployment-group .highlight-metrics{grid-template-columns:1fr}
 .highlight-metric{display:flex;flex-direction:column;align-items:center;min-width:0;gap:4px}
 .highlight-metric .metric-label{font-size:9.5px;color:#826774;line-height:1.3;white-space:nowrap}
@@ -98,3 +98,5 @@
 @media(max-width:1050px){.hero-highlights{padding:12px 5px}.highlight-group{padding:0 6px}.highlight-metric strong{font-size:clamp(13px,3.2vw,28px)}.highlight-group h2{font-size:clamp(8px,1.25vw,11px);letter-spacing:0}.highlight-metric .metric-label,.highlight-metric .metric-unit{font-size:clamp(7px,1.2vw,9.5px)}.highlight-metric small{font-size:clamp(7px,1vw,8px)}}
 @media(max-width:600px){.hero-highlights{grid-template-columns:minmax(0,3.1fr) minmax(0,3.2fr) minmax(0,1.2fr);padding:10px 3px;margin-top:20px}.highlight-group{padding:0 3px}.highlight-group h2{margin-bottom:8px;font-size:clamp(7px,1.9vw,10px)}.highlight-metrics{gap:2px}.highlight-metric{gap:3px}.highlight-metric strong{font-size:clamp(12px,3.4vw,20px);letter-spacing:-.5px}.highlight-metric .metric-label{font-size:clamp(6px,1.7vw,9px);letter-spacing:-.1px}.highlight-metric .metric-unit,.highlight-metric small{font-size:clamp(6px,1.7vw,9px)}.gpu-vendor{display:none}.benchmark-group small,.deployment-group small{display:none}}
 @media(max-width:600px){.deployment-group{padding-left:1px;padding-right:1px}}
+@media(max-width:1050px){.training-duration-note{font-size:clamp(7px,1vw,8px)}}
+@media(max-width:600px){.training-duration-note{margin-top:3px;font-size:clamp(6px,1.7vw,9px)}}
