@@ -24,7 +24,7 @@
 
 /* Revision 5: acronym initials, results-first summary, and grouped demonstrations. */
 #paper-heading u{text-decoration-thickness:.065em;text-underline-offset:.13em;text-decoration-skip-ink:none}
-.contact-line{font-size:12px;color:#897381;margin:9px 0 17px}.contact-line a{font-weight:550;color:var(--red)}
+.contact-line{font-size:12px;color:#897381;margin:9px 0 17px}.contact-line .contact-channel{display:inline-block}.contact-line a,.contact-line .wechat-id{font-weight:550;color:var(--red)}
 .deployment-highlights{grid-template-columns:repeat(5,minmax(0,1fr));max-width:none;padding:21px 5px;gap:0;margin-top:30px}
 .deployment-highlights>div{padding:0 9px;gap:6px;min-width:0;justify-content:start}.deployment-highlights strong{font-size:34px;white-space:nowrap;letter-spacing:-1px}.deployment-highlights strong span{font-size:15px;letter-spacing:0}
 .deployment-highlights>div>.metric-label{font-size:11px;font-weight:650;color:#875366;letter-spacing:.05px;white-space:nowrap;margin-bottom:5px}
