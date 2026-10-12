@@ -83,17 +83,15 @@
 /* Revision 14: paradigm comparison opens Architecture as Figure 1. */
 #figure-1 .figure-panels{padding:0;border:0;border-radius:0}#figure-1 img{width:100%;max-height:none;height:auto}
 
-/* Training volume leads the hero; benchmark results remain a compact row. */
-.training-scale{margin:26px auto 0;padding:20px 26px 22px;border-radius:12px;background:linear-gradient(115deg,#7d2036,#a3324b);color:#fff;text-align:center}
-.training-scale-heading{text-align:left;font-size:12px;font-weight:650;letter-spacing:1.3px;text-transform:uppercase}
-.training-scale-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:17px 0 0}
-.training-scale-metrics>div{display:flex;flex-direction:column;align-items:center;min-width:0;padding:0 12px;gap:2px}
-.training-scale-metrics>div+div{border-left:1px solid #ffffff38}
-.training-scale-metrics strong{font-size:64px;font-weight:750;line-height:1.05;letter-spacing:-2px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.training-scale-metrics strong span{font-size:.65em;vertical-align:10%;margin-left:2px}
-.training-unit{font-size:18px;font-weight:600;letter-spacing:.2px}.training-detail{font-size:11px;color:#f7d9e2}
-.deployment-highlights{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:14px;padding:17px 5px}
-.deployment-highlights>div{grid-column:auto;padding:0 9px}.deployment-highlights>div:nth-child(n){grid-column:auto;border-top:0}
-.deployment-highlights>div+div{border-left:1px solid #e6cad5}
-@media(max-width:900px){.training-scale-metrics strong{font-size:52px}.training-detail{font-size:10px}}
-@media(max-width:600px){.training-scale{margin-top:22px;padding:16px 12px}.training-scale-heading{font-size:9px;letter-spacing:.7px}.training-scale-metrics{margin:16px 0 0}.training-scale-metrics>div{padding:0 6px;gap:3px}.training-scale-metrics strong{font-size:clamp(26px,7.4vw,40px);letter-spacing:-1px}.training-unit{font-size:13px}.training-detail{font-size:9px;line-height:1.3;max-width:105px}.deployment-highlights{grid-template-columns:repeat(2,minmax(0,1fr));padding:3px 8px;margin-top:12px}.deployment-highlights>div{padding:13px 5px}.deployment-highlights>div:nth-child(odd){border-left:0}.deployment-highlights>div:nth-child(n+3){border-top:1px solid #e6cad5}.deployment-highlights>div:last-child{grid-column:auto}}
+/* Three groups share one row: public benchmarks, training, and deployment. */
+.hero-highlights{display:grid;grid-template-columns:minmax(0,3.1fr) minmax(0,3.2fr) minmax(0,1.2fr);margin:28px auto 0;padding:18px 10px;border:1px solid #ead7df;border-radius:12px;background:#fcf4f6;gap:0}
+.highlight-group{min-width:0;padding:0 10px}.highlight-group+.highlight-group{border-left:1px solid #e6cad5}
+.highlight-group h2{font-size:12px;line-height:1.3;letter-spacing:.4px;font-weight:650;color:#875366;margin:0 0 14px;white-space:nowrap}
+.highlight-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.deployment-group .highlight-metrics{grid-template-columns:1fr}
+.highlight-metric{display:flex;flex-direction:column;align-items:center;min-width:0;gap:5px}
+.highlight-metric .metric-label{font-size:11px;color:#826774;line-height:1.3;white-space:nowrap}
+.highlight-metric strong{font-size:36px;line-height:1.1;font-weight:730;letter-spacing:-1px;color:var(--red);white-space:nowrap;font-variant-numeric:tabular-nums}
+.highlight-metric strong span{font-size:.48em;font-weight:600;letter-spacing:0}.training-group strong span{font-size:.65em;vertical-align:8%;margin-left:1px}
+.highlight-metric .metric-unit{font-size:11px;line-height:1.3;color:#6f5866;white-space:nowrap}.highlight-metric small{font-size:9px;line-height:1.3;color:#9a7d8c;white-space:nowrap}.training-group small{color:var(--red);font-weight:650}
+@media(max-width:1050px){.hero-highlights{padding:17px 5px}.highlight-group{padding:0 7px}.highlight-metrics{gap:4px}.highlight-metric strong{font-size:clamp(13px,3.2vw,32px)}.highlight-group h2{font-size:clamp(8px,1.25vw,12px);letter-spacing:0}.highlight-metric .metric-label,.highlight-metric .metric-unit{font-size:clamp(7px,1.2vw,11px)}.highlight-metric small{font-size:clamp(7px,1vw,9px)}}
+@media(max-width:600px){.hero-highlights{grid-template-columns:minmax(0,3.1fr) minmax(0,3.2fr) minmax(0,1.2fr);padding:13px 3px;margin-top:23px;border-radius:9px}.highlight-group{padding:0 3px}.highlight-group h2{margin-bottom:11px;font-size:clamp(7px,1.9vw,10px)}.highlight-metrics{gap:2px}.highlight-metric{gap:4px}.highlight-metric strong{font-size:clamp(12px,3.4vw,20px);letter-spacing:-.5px}.highlight-metric .metric-label{font-size:clamp(6px,1.7vw,9px);letter-spacing:-.1px}.highlight-metric .metric-unit,.highlight-metric small{font-size:clamp(6px,1.7vw,9px)}.gpu-vendor{display:none}.benchmark-group small,.deployment-group small{display:none}}
