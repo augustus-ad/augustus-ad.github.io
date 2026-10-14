@@ -8,18 +8,19 @@ document.querySelectorAll('.paper-zoom').forEach(button=>button.addEventListener
 }));
 document.querySelector('#close-figure').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
-const videos=[...document.querySelectorAll('video[data-preview]')];
+const clips=[...document.querySelectorAll('img[data-preview]')];
 const toggle=document.querySelector('#toggle-previews');
 let previews=!matchMedia('(prefers-reduced-motion: reduce)').matches;
 const visible=new Set();
+function show(img,play){const next=play?img.dataset.gif:img.dataset.still;if(img.getAttribute('src')!==next)img.src=next;}
 function updateToggle(){toggle.textContent=previews?'Pause previews':'Play previews';toggle.setAttribute('aria-pressed',String(previews));}
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  const video=entry.target;
-  if(entry.isIntersecting){visible.add(video);if(previews)video.play().catch(()=>{});}
-  else{visible.delete(video);video.pause();}
+  const img=entry.target;
+  if(entry.isIntersecting){visible.add(img);show(img,previews);}
+  else{visible.delete(img);show(img,false);}
 }),{threshold:.4});
-videos.forEach(video=>observer.observe(video));
-toggle.addEventListener('click',()=>{previews=!previews;updateToggle();videos.forEach(v=>{if(previews&&visible.has(v))v.play().catch(()=>{});else v.pause();});});
+clips.forEach(img=>observer.observe(img));
+toggle.addEventListener('click',()=>{previews=!previews;updateToggle();clips.forEach(img=>show(img,previews&&visible.has(img)));});
 updateToggle();
 document.querySelector('#copy-citation').addEventListener('click',async()=>{
   const text=document.querySelector('#citation').textContent;let success=false;
